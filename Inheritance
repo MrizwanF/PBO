@@ -1,0 +1,27 @@
+<?php
+class batre {
+	public $fc;
+	public $design;
+	
+	public function __construct($fc, $design) {
+		$this->fc  = $fc;
+		$this->design = $design;
+		}
+	}
+	
+class hitung extends batre {
+	public function hitung_batre() {
+		$x = ($this->fc/$this->design)*100;
+	return $x;
+	}
+	
+	public function __destruct() {
+		echo "keterangan:<br> 
+		>=60% = Masih Baik <br>
+		<60% = Saatnya ganti<br>";
+	}
+}
+
+$hasil = new hitung(36086, 37130);
+
+echo "battery percentase hasilnya adalah = " .$hasil->hitung_batre()."<hr>";
