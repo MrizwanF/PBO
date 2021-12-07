@@ -1,0 +1,19 @@
+<?php
+class motor {
+  final public function nyalakan_mesin(){
+    return "Cold Start Engine R15";
+  }
+}
+
+class yamaha extends motor{
+  public function cold_start_engine_r15(){
+    return parent::cold_start_engine_r15();
+  }
+}
+
+$motor_r15 = new motor();
+
+echo $motor_r15->nyalakan_mesin();
+
+
+ ?>
